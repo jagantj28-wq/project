@@ -136,6 +136,18 @@ pytest
 
 ---
 
+## 👨‍💻 Author & Copyright
+
+**PrepPulse AI** is conceptualized, designed, and developed by:
+* **Author**: [Jagan T. Jiju](https://github.com/jagantj28-wq)
+* **Email**: [jagantj28@gmail.com](mailto:jagantj28@gmail.com)
+* **Repository**: [https://github.com/jagantj28-wq/project](https://github.com/jagantj28-wq/project)
+
+Copyright © 2026 **Jagan T. Jiju**. All rights reserved.
+
+---
+
 ## 📄 License
 
-Distributed under the **MIT License** (100% Free & Open Source). See [`LICENSE`](LICENSE) for more details.
+Distributed under the **MIT License** (100% Free & Open-Source Software). See [`LICENSE`](LICENSE) for more details.
+
