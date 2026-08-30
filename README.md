@@ -1,20 +1,55 @@
 <div align="center">
 
 # ⚡ PrepPulse AI
-### *AI-Powered Resume Analyzer & Voice/Text Mock Interview Coach*
+### *100% Free & Open-Source AI Resume Analyzer & Voice/Text Mock Interview Coach*
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4+-38B2AC.svg?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com)
 
-**PrepPulse AI** is an end-to-end career acceleration suite that analyzes resumes against target job descriptions, evaluates ATS compatibility, transforms weak bullet points using the STAR methodology, and runs interactive, real-time voice and text mock interview simulations.
+**PrepPulse AI** is a **100% free, community-accessible career accelerator** designed to help job seekers worldwide optimize resumes for ATS screeners and master high-stakes technical & behavioral interviews with live voice practice.
 
-[Features](#-key-features) • [Quick Start](#-quick-start) • [Architecture](#-system-architecture) • [Usage Guide](#-usage-guide) • [Contributing](#-contributing)
+[Live Demo & Deploy](#-free-public-deployment-guide) • [Key Features](#-key-features) • [Quick Start](#-quick-start) • [Architecture](#-system-architecture)
 
 ---
 
 </div>
+
+## 🌐 100% Free Public Deployment (Make it Live Online)
+
+You can host and share PrepPulse AI with anyone on the internet completely for **free** with **zero server costs**.
+
+### 🌟 Option 1: Deploy on Render.com (Recommended & Easiest)
+1. Fork or push this repository to your **GitHub** account.
+2. Sign in to [Render.com](https://render.com) (free).
+3. Click **New +** → **Web Service**.
+4. Select your **`preppulse-ai`** repository.
+5. Render will automatically detect the settings from `render.yaml` or use:
+   - **Runtime**: Python
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+   - **Instance Type**: **Free**
+6. Click **Create Web Service**. Within 2 minutes, you will get a permanent public link:
+   👉 `https://your-app-name.onrender.com`
+
+---
+
+### 🌟 Option 2: Deploy on Hugging Face Spaces (100% Free & Unlimited)
+1. Go to [Hugging Face Spaces](https://huggingface.co/spaces) and click **Create new Space**.
+2. Select **Docker** or **Gradio/FastAPI** as the Space SDK.
+3. Link your GitHub repo or push this codebase directly.
+4. Your free public web app is instantly live for the world!
+
+---
+
+### 🌟 Option 3: Deploy on Vercel
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run `vercel` in the project root.
+3. Your app is live on `https://your-project.vercel.app`!
+
+---
 
 ## 🌟 Key Features
 
@@ -70,11 +105,7 @@
 
 ---
 
-## 🚀 Quick Start
-
-### Prerequisites
-- Python 3.10 or higher
-- [uv](https://github.com/astral-sh/uv) (recommended) or standard `pip`
+## 🚀 Quick Local Start
 
 ### 1. Clone the Repository
 ```bash
@@ -83,71 +114,28 @@ cd preppulse-ai
 ```
 
 ### 2. Install Dependencies
-Using **uv** (ultra-fast):
-```bash
-uv sync
-```
-Or using standard **pip**:
 ```bash
 pip install -r requirements.txt
+# or with uv
+uv sync
 ```
 
-### 3. (Optional) Set up Environment Variables
-Create a `.env` file from the template:
-```bash
-cp .env.example .env
-```
-Add your Google Gemini API key if desired (the application also features built-in offline heuristic analysis modes if no API key is provided).
-
-### 4. Launch Application
+### 3. Run Locally
 ```bash
 python run.py
 ```
-Open your browser and navigate to **`http://localhost:8000`**.
-
----
-
-## 📖 Usage Guide
-
-1. **Resume & Job Match**:
-   - Go to the **Resume Analyzer** tab.
-   - Upload your resume (PDF/DOCX/TXT) and paste the target job description.
-   - Click **Analyze Match** to get instant ATS scores, missing keywords, and section reviews.
-2. **Interactive Mock Interview**:
-   - Go to the **Mock Interview** tab.
-   - Select your target role, seniority level, and question mode (Behavioral, Technical, or Resume-Based).
-   - Click **Start Interview**.
-   - Listen to the question or read on screen, then toggle your **Microphone** or type your answer.
-   - Receive instant STAR scores and coaching after each question.
-3. **Optimize Resume Bullets**:
-   - Go to the **Career Toolkit** tab.
-   - Paste any bullet from your resume to generate 3 high-impact quantified variations.
+Open **`http://localhost:8000`** in your browser.
 
 ---
 
 ## 🧪 Running Automated Tests
 
-Run the test suite with `pytest`:
 ```bash
-uv run pytest
-# or
 pytest
 ```
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
 ## 📄 License
 
-Distributed under the MIT License. See [`LICENSE`](LICENSE) for more details.
+Distributed under the **MIT License** (100% Free & Open Source). See [`LICENSE`](LICENSE) for more details.
