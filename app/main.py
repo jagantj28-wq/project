@@ -45,7 +45,11 @@ app.include_router(tools_router)
 @app.get("/", response_class=HTMLResponse)
 async def serve_index(request: Request):
     """Serve the main application interface."""
-    return templates.TemplateResponse("index.html", {"request": request, "app_name": settings.PROJECT_NAME})
+    return templates.TemplateResponse(
+        request=request,
+        name="index.html",
+        context={"app_name": settings.PROJECT_NAME}
+    )
 
 @app.get("/health")
 async def health_check():
